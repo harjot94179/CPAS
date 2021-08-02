@@ -1,0 +1,30 @@
+{% extends 'homebase.html' %} {% load static %} 
+
+
+
+
+
+{% block head1 %}
+
+
+
+
+ {% endblock head1%} 
+
+
+
+
+{% block content1 %} 
+<div class="container">
+<h3 class="text-center text-primary">Your prediction score is <span class="text-danger"> {{result}}
+</span>
+
+</h3>
+<br><br><br>
+<a href="{% url 'assist'%}"> Get Assistance </a>
+<br><hr><br>
+
+<a href="{% url 'safetyguide'%}"> Get Safety Guide </a>
+
+</div>
+{% endblock content1 %}

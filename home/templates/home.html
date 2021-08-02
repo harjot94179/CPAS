@@ -1,0 +1,62 @@
+{% extends 'homebase.html' %}
+{% load static %}
+{% block head1 %}
+ <link rel="stylesheet" href="{% static 'css/1.css' %}">
+
+
+{% endblock head1 %}
+{% block content1 %}
+<br><br>
+
+<br><br>
+<h1 class="text-center">Covid Prediction and Assistance System</h1>
+<br>
+<div class="container" id="bck">
+<div class="banner" >
+    <div class="container">
+
+      <h1 class="font-weight-semibold">Welcome, <a href="{% url 'profile' user.id%}">{{user.name}}</a></h1>
+      <br>
+      <h6 class="font-weight-normal text-muted pb-3">Covid Prediction and Assistance System is designed to help you through these tough times.This web application focuses on creating a Covid prediction System which also guides the user in case he is found to be infected by the Coronavirus. In such case, this system provides user with a written guide which has necessary steps to be followed if user is found Covid positive, enlisting the steps required to help himself be protected in an environment where if he is found negative on a manual or physical diagnosis can stay protected from direct or indirect contact with any infected person. </h6>
+      
+      
+    </div>
+  </div>
+  <div class="content-wrapper">
+    <div class="container">
+      <section class="features-overview" id="features-section" >
+        <div class="content-header">
+          <h3>Our Prespective</h3>
+          <h6 class="section-subtitle text-muted">Everyone‘s in a state of fear and concern because of the current situation we don’t know if the person someone met a couple of minutes ago, was infected with coronavirus? or whether he carried those pathogens with his breath? Or the physical contact you made with someone was it safe? No ‘one can answer those questions but we can be take care of ourselves so in addition to the preventions and precautions one take we would like to add something to that in terms of a prediction and assistance system which will guide the prospective user by running an algorithm and comparing his body temperature and other symptoms with that of someone infected  with Covid and if the results of the diagnosis came out to be positive then guide the user to what precautions he should take and alert the nearby hospitals and medical workers about a potent patient and route him to nearest pharmaceutical dispensaries.</h6>
+        </div>
+        <div class="d-md-flex justify-content-between">
+          <div class="grid-margin d-flex justify-content-start">
+            <div class="features-width">
+      
+              <h5 class="py-3">Take<br>Prediction Test</h5>
+              <p class="text-muted">To check whether you have been infected by corona virus click the link below and you will be directed to the predictor which will ask you to fill certain fields which will use random forrest algorithm and will give results if you are COVID positive or negative</p>
+              <a href="{% url 'predictor' %}"><p class="readmore-link">Visit</p></a>  
+            </div>
+          </div>
+          <div class="grid-margin d-flex justify-content-center">
+            <div class="features-width">
+
+              <h5 class="py-3">Safety <br> Guide</h5>
+              <p class="text-muted">If you don't know what to do what preventions and precautions to take and what safety measures you must take while going out or if you want to know about the current progress of the vaccine or medicine click the link below</p>
+              <a href="{% url 'safetyguide' %}"><p class="readmore-link">Visit</p></a>
+            </div>
+          </div>
+          <div class="grid-margin d-flex justify-content-end">
+            <div class="features-width">
+            
+              <h5 class="py-3">Get<br>Assistance</h5>
+              <p class="text-muted">If you know that your results from COVID predictor are positive and want to take a COVID checkup in your nearest hospital or want to go to nearest support centre click the link below</p>
+              <a href="{% url 'assist' %}"><p class="readmore-link">Visit</p></a>
+            </div>
+          </div>
+        </div>
+      </section>     
+</div>       
+
+{% endblock content1 %}
+
