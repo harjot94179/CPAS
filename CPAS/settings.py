@@ -60,6 +60,10 @@ MIDDLEWARE_CLASSES = (
     'whitenoise.middleware.WhiteNoiseMiddleware',
 )
 
+WHITENOISE_MIMETYPES = {
+    '.xsl': 'application/xml'
+}
+
 
 ROOT_URLCONF = 'CPAS.urls'
 
