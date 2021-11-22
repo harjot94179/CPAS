@@ -1,0 +1,18 @@
+{% extends 'homebase.html' %}
+{% load static %}
+{% block head1 %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="{% static 'fonts/material-icon/css/material-design-iconic-font.min.css' %}"> 
+{% endblock head1 %}
+
+{% block content1 %}
+<div class="container">
+ <h1 class="text-center">Assistance</h1>
+ <br>
+ <p>For your assistance we will be providing you with a link which will show hospitals near you as you can get yourself tested for corona and if tested positive you can get much needed medical assistance from doctors and if you are having other symptoms then you can get a diagnosis and have yourself treated accordingly</p>
+ <br><br><br>
+ <div style="text-center">
+ <a href="https://www.google.com/maps/search/find+hospitals+near+{{location}}">Get Hospitals near You</a>
+ </div>
+</div>
+{% endblock content1 %}
